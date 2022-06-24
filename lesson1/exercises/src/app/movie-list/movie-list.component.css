@@ -1,7 +1,9 @@
-.movies {
-    color: green;
-    font-size: 1.1vw;
+h3 {
+  color: #f5d795;
+  text-align: center;
 }
-    h3 {
-        text-align: center;
-    }
+
+.movies {
+  color: #a88a45;
+  font-size: 1.1vw;
+}
