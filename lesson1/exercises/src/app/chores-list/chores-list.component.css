@@ -1,0 +1,13 @@
+h3 {
+  text-decoration: underline;
+  color: #96b6f5;
+}
+
+.chores {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #5671a8;
+}
+
+.chores > ul > li {
+  font-style: italic;
+}
