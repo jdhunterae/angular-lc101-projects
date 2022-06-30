@@ -20,6 +20,18 @@ export class CandidatesComponent implements OnInit {
 
   constructor() { }
 
+  showSendButton(person: object) {
+    if (!person) {
+      return false;
+    }
+
+    if (this.crew.includes(person)) {
+      return false;
+    }
+
+    return true;
+  }
+
   addToCrew(person: object)   {
     if (!person || this.crew.includes(person)) {
       return;
