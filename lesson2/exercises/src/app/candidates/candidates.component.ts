@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CandidatesComponent implements OnInit {
    missionName = "LaunchCode Moonshot"
+   editMissionName = false;
 
    candidates = [
     {name: 'Rusty Rutabaga', data: {age: 5, mass: '0.75 kg', sidekick: 'Blake'}, image: 'assets/images/Blake.png'},
@@ -42,6 +43,11 @@ export class CandidatesComponent implements OnInit {
       }
 
       this.crew.push(person);
+   }
+
+   changeMissionName(event) {
+    this.missionName = event.target.value;
+    this.editMissionName = false;
    }
 
   ngOnInit() {
