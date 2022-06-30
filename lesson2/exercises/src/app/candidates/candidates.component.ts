@@ -25,6 +25,10 @@ export class CandidatesComponent implements OnInit {
       return false;
     }
 
+    if (this.crew.length >= 3) {
+      return false;
+    }
+
     if (this.crew.includes(person)) {
       return false;
     }
