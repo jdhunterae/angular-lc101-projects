@@ -20,6 +20,14 @@ export class CandidatesComponent implements OnInit {
 
   constructor() { }
 
+  addToCrew(object)   {
+    if (this.crew.includes(object)) {
+      return;
+      }
+
+      this.crew.push(object);
+   }
+
   ngOnInit() {
   }
 
