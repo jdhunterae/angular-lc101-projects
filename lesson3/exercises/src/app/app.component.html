@@ -24,10 +24,10 @@
       <div class="col-3">
          <div class="container-right">
             <div *ngIf="!takeOffEnabled">
-               <button (click)="moveRocket(rocketImage, 'up')">up</button>
-               <button (click)="moveRocket(rocketImage, 'down')">Down</button>
-               <button (click)="moveRocket(rocketImage, 'right')">Right</button>
-               <button (click)="moveRocket(rocketImage, 'left')">Left</button>
+               <button (click)="moveRocket(rocketImage, 'up')" [disabled]="!upEnabled">up</button>
+               <button (click)="moveRocket(rocketImage, 'down')" [disabled]="!downEnabled">Down</button>
+               <button (click)="moveRocket(rocketImage, 'right')" [disabled]="!rightEnabled">Right</button>
+               <button (click)="moveRocket(rocketImage, 'left')" [disabled]="!leftEnabled">Left</button>
             </div>
             <h3>Space Shuttle Height</h3>
             <p>{{height}} km</p>
@@ -35,7 +35,7 @@
       </div>
    </div>
    <div class="container-control-buttons">
-      <button (click)="handleTakeOff()" [disabled]="!takeOffEnabled">Take Off</button>
+      <button (click)="handleTakeOff(rocketImage)" [disabled]="!takeOffEnabled">Take Off</button>
       <button (click)="handleLanding(rocketImage)" [disabled]="takeOffEnabled">Land</button>
       <button (click)="handleAbort(rocketImage)" [disabled]="takeOffEnabled">Abort Mission</button>
    </div>
